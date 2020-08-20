@@ -11,7 +11,9 @@
         name: 'App',
         components: {},
         mounted() {
-            axios.get('/user/getUser')
+            axios.get('/user/getUser').then((res) => {
+                console.log(' 请求回来了 --->>>', res);
+            })
         }
     }
 </script>

@@ -6,7 +6,7 @@ export function getUser() {
     console.log(`%c user模块执行了`, "color:red");
     return  {
         url: '/user/getUser',
-        type: 'post',
+        type: 'get',
         data: {
             "code": 200,
             "msg": null,

@@ -19,6 +19,7 @@ function createMock(module, isOpenMock = true) {
     console.log(`%c创建 mockjs 执行了 ...`, "color:red");
     if (isOpenMock) {
         for (let key in module) {
+
             ((res) => { // res 请求的每个模块内部的返回结果
                 console.log(`%c res`, "color:res", res);
                 if (res.isOpen !== false) {
@@ -27,7 +28,7 @@ function createMock(module, isOpenMock = true) {
                     //     url = url + res.url
                     // }
                     console.log('0000', url);
-                    Mock.mock(new RegExp(url), res.type, (opts, a) => {
+                    Mock.mock(url, res.type, (opts, a) => {
                         console.log(111111, opts, a);
                         opts['data'] = opts.body ? JSON.parse(opts.body) : null
                         delete opts.body
