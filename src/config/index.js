@@ -2,4 +2,4 @@
  *  全局的配置文件
  */
 
-export const baseUrl = 'http://localhost:8081'
+export const baseUrl = 'http://192.168.1.3:8080'

@@ -5,17 +5,22 @@
 </template>
 
 <script>
-    import axios from 'axios'
+  import axios from 'axios'
 
-    export default {
-        name: 'App',
-        components: {},
-        mounted() {
-            axios.get('/user/getUser').then((res) => {
-                console.log(' 请求回来了 --->>>', res);
-            })
-        }
+  export default {
+    name: 'App',
+    components: {},
+    mounted() {
+      axios.get('/user/getUser').then((res) => {
+        console.log(' 请求回来了 --->>>', res);
+      })
+
+      axios.get('/list/getList').then((res) => {
+        console.log('list 0000', res);
+
+      })
     }
+  }
 </script>
 
 <style>
