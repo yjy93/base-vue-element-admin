@@ -1,6 +1,8 @@
 <template>
     <div id="app">
         <h1>Hello, base-vue-element-admin!</h1>
+        <h2>{{$t('action.name')}}</h2>
+        <h2>{{$t('action.name')}}</h2>
     </div>
 </template>
 
@@ -11,15 +13,18 @@
         name: 'App',
         components: {},
         mounted() {
+            console.log('this =---->>',this.$store.state.name);
+            console.log(`%c $i18n`,"color:red",this.$i18n);
+            console.log(`%c $i18n`,"color:red",this.$t);
             // axios.post('/user/getUser', {
             //     name: 'Gene'
             // }).then((res) => {
             //     console.log(' user 请求回来了 --->>>', res);
             // })
 
-            this.$api.user.getUser().then((res) => {
-                console.log(`%c app 请求`, "color:red", res);
-            })
+            // this.$api.user.getUser().then((res) => {
+            //     console.log(`%c app 请求`, "color:red", res);
+            // })
         }
     }
 </script>
