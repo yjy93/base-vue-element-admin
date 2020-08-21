@@ -3,13 +3,12 @@
  */
 
 export function getUser() {
-    console.log(`%c user模块执行了`, "color:red");
-    return  {
+    return {
         url: '/user/getUser',
-        type: 'get',
+        type: 'post',
         data: {
             "code": 200,
-            "msg": null,
+            "msg": '请求成功了',
             "data": 1
         }
     }
