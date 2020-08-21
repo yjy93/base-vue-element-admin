@@ -1,3 +1,9 @@
+/**
+ * @author: Gene
+ * @date: 2020-08-21 10:12:12
+ * @Email： Genejob@163.com
+ * @description: mockjs拦截
+ */
 import Mock from 'mockjs'
 
 import * as user from './models/user'
@@ -29,5 +35,4 @@ function createMock(model, isOpen = false) {
             })(model[key]() || {})
         }
     }
-
 }
