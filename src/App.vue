@@ -11,10 +11,14 @@
         name: 'App',
         components: {},
         mounted() {
-            axios.post('/user/getUser', {
-                name: 'Gene'
-            }).then((res) => {
-                console.log(' user 请求回来了 --->>>', res);
+            // axios.post('/user/getUser', {
+            //     name: 'Gene'
+            // }).then((res) => {
+            //     console.log(' user 请求回来了 --->>>', res);
+            // })
+
+            this.$api.user.getUser().then((res) => {
+                console.log(`%c app 请求`, "color:red", res);
             })
         }
     }
