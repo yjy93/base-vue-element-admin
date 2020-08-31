@@ -3,6 +3,7 @@
         <h1>Hello, base-vue-element-admin!</h1>
         <h2>{{$t('action.name')}}</h2>
         <h2>{{$t('action.name')}}</h2>
+        <el-button type="primary">132</el-button>
     </div>
 </template>
 
